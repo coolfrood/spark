@@ -55,7 +55,7 @@ class KryoClosureSerializerSuite extends FunSuite with SharedSparkContext {
     val part = new TestPartition(fsplit)
         val bcast = sc.broadcast(new Array[Byte](4))
 
-    MinLog.set(MinLog.LEVEL_TRACE)
+    //MinLog.set(MinLog.LEVEL_TRACE)
     for (i <- 0 until 2) {
       val serialized = kryo.serialize(part)
       println(s"serialized.limit=${serialized.limit}")
